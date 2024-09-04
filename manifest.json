@@ -1,0 +1,17 @@
+{
+    "name": "Terraform Doc Version Warning",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "An extension to warn when you're looking at old terraform docs.",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://registry.terraform.io/*"],
+            "js": ["parse_page.js"],
+            "run_at": "document_idle"
+        }
+    ]
+    
+}
